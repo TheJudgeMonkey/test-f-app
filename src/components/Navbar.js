@@ -1,25 +1,37 @@
 import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import Logout from "./auth/Logout";
 
 const Navbar = ({ authChecked, loggedIn, currentUser }) => {
   return (
     <nav>
       <div>
-        <NavLink to='/'>
-          NormalRoute
-        </NavLink>
-        <NavLink to='/protected_route'>
-          ProtectedRoute
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to='/signup'>
-          Sign Up
-        </NavLink>
-        <NavLink to='/login'>
-          Log In
-        </NavLink>
+        <div>
+          <NavLink to='/'>
+            NormalRoute
+          </NavLink>
+          <NavLink to='/protected_route'>
+            ProtectedRoute
+          </NavLink>
+        </div>
+        <div>
+          {loggedIn ? (
+            <>
+              {currentUser.email}
+              <Logout />
+            </>
+          ) : (
+            <>
+              <NavLink to='/signup'>
+                Sign Up
+              </NavLink>
+              <NavLink to='/login'>
+                Log In
+              </NavLink>
+            </>
+          )}
+        </div>
       </div>
     </nav>
   );
