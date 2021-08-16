@@ -4,6 +4,7 @@ import { signupUser } from "../../actions/auth";
 
 class Signup extends React.Component {
   state = {
+    username: "",
     email: "",
     password: "",
     errors: {status: {message: ""}}
@@ -29,6 +30,18 @@ class Signup extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <h1>Sign Up</h1>
         <p>{this.state.errors.status.message}</p>
+        <fieldset>
+          <label htmlFor='username'>
+            Username:
+          </label>
+          <input
+            type='text'
+            name='username'
+            id='username'
+            onChange={this.handleChange}
+            value={this.state.username}
+          />
+        </fieldset>
         <fieldset>
           <label htmlFor='email'>
             Email:
