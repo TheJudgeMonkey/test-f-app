@@ -46,6 +46,9 @@ class Navbar extends React.Component {
             <NavLink exact to='/news'>
               News
             </NavLink>
+            <NavLink exact to='/users'>
+              Users
+            </NavLink>
           </div>
           <div>
             {this.renderAuthLinks()}

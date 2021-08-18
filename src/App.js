@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import NormalRoute from "./components/NormalRoute";
 import News from "./components/News";
+import Users from "./components/Users";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={NormalRoute} />
+          <Route exact path='/users' component={Users} />
           <Route exact path='/news' component={News} />
           <Route
             exact
