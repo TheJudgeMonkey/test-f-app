@@ -7,8 +7,8 @@ class User extends React.Component {
   };
 
   componentDidMount() {
-    let userPage = 'http://localhost:3001/users/2'
-    fetch(userPage)
+    const userID = this.props.match.params.userID;
+    fetch(`http://localhost:3001/users/${userID}`)
       .then((response) => { 
         return response.json();
         })
