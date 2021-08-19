@@ -43,8 +43,8 @@ class Navbar extends React.Component {
             <NavLink exact to='/protected_route'>
               ProtectedRoute
             </NavLink>
-            <NavLink exact to='/news'>
-              News
+            <NavLink exact to='/posts'>
+              Posts
             </NavLink>
             <NavLink exact to='/users'>
               Users

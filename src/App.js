@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import NormalRoute from "./components/NormalRoute";
-import News from "./components/News";
+import Posts from "./components/Posts";
+import Post from "./components/Post";
 import Users from "./components/Users";
 import User from "./components/User";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -19,7 +20,8 @@ function App() {
           <Route exact path='/' component={NormalRoute} />
           <Route exact path='/users' component={Users} />
           <Route exact path='/user/:userID' component={User} />
-          <Route exact path='/news' component={News} />
+          <Route exact path='/posts' component={Posts} />
+          <Route exact path='/post/:postID' component={Post} />
           <Route
             exact
             path='/protected_route'
