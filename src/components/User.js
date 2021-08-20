@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 class User extends React.Component {
   state = {
-    user: {}
+    posts: []
   };
 
   componentDidMount() {
@@ -12,19 +13,23 @@ class User extends React.Component {
         return response.json();
         })
       .then((data) => 
-        this.setState({ user: data.user })
+        this.setState({ posts: data.posts })
       );
   }
   
   render() {
-    const { user } = this.state;
+    const { posts } = this.state;
     return (
       <ul>
-        <li>Username: {user.username} </li>
-        <li>email: {user.email}</li>
+        {posts.map((post, id) => {
+          return (
+            <Link to={`/post/${post.id}`} key={id}>
+              <li>Title: {post.title}, Description: {post.description}</li>
+            </Link>
+          )
+        })}
       </ul>
     );
-    
   }
 }
 
