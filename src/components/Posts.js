@@ -21,6 +21,7 @@ function Posts() {
         <Link to={`/post/${post.id}`} key={id}>
           <li>Title: {post.title}</li>
           <li>Description: {post.description}</li>
+          <p></p>
         </Link>
       )
       })}

@@ -24,7 +24,9 @@ class User extends React.Component {
         {posts.map((post, id) => {
           return (
             <Link to={`/post/${post.id}`} key={id}>
-              <li>Title: {post.title}, Description: {post.description}</li>
+              <li>Title: {post.title}, <br></br>
+              Description: {post.description}</li>
+              <p></p>
             </Link>
           )
         })}

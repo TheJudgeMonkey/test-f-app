@@ -20,6 +20,7 @@ function Users() {
       return (  
         <Link to={`/user/${user.id}`} key={id}>
           <li>Username: {user.username}, email: {user.email}</li>
+          <p></p>
         </Link>
       )
       })}
