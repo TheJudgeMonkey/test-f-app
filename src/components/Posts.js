@@ -18,7 +18,7 @@ function Posts() {
     <ul>
       {posts.posts.map((post, id) => {
       return (  
-        <Link to={`/post/${post.id}`} key={id}>
+        <Link to={`/postId/${post.id}`} key={id}>
           <li>Title: {post.title}</li>
           <li>Description: {post.description}</li>
           <p></p>
