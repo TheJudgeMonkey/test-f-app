@@ -49,8 +49,11 @@ class Navbar extends React.Component {
             <NavLink exact to='/users'>
               Users
             </NavLink>
-            <NavLink exact to='/body'>
-              Body
+            <NavLink exact to='/posts_admin'>
+              Posts
+            </NavLink>
+            <NavLink exact to='/profile_admin'>
+              Profile
             </NavLink>
           </div>
           <div>

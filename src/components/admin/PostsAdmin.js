@@ -2,7 +2,7 @@ import React from "react";
 import AllPosts from "./AllPosts";
 import NewPost from "./NewPost";
 
-class Body extends React.Component {
+class PostsAdmin extends React.Component {
 
   constructor(props) {
     super(props);
@@ -94,4 +94,4 @@ class Body extends React.Component {
   }
 }
 
-export default Body
+export default PostsAdmin

@@ -1,6 +1,6 @@
 import React from "react";
 
-class Post extends React.Component{
+class PostAdmin extends React.Component{
 
   constructor(props){
     super(props);
@@ -40,4 +40,4 @@ class Post extends React.Component{
   }
 }
 
-export default Post
+export default PostAdmin

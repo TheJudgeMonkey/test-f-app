@@ -1,12 +1,12 @@
 import React from "react";
-import Post from "./Post"
+import PostAdmin from "./PostAdmin"
 
 const AllPosts= (props) => {
 
   var posts = props.posts.map((post) => {
     return(
       <div key={post.id}>
-       <Post post={post} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate}/>
+       <PostAdmin post={post} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate}/>
       </div>
     )
   })
